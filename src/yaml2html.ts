@@ -1,5 +1,5 @@
 
-const styleTable = "style='border:none; border-collapse:collapse;'";
+const styleTable = "style='border:none; border-collapse:collapse;color:#000000'";
 const styleTd = "style='background-color:#ffffff; padding:5px; border:1px solid silver; border-collapse:collapse;'";
 const styleTh = "style='white-space:normal; background-color:#eeeeee; padding:5px; width:70px; border:1px solid silver; border-collapse:collapse; vertical-align:top'";
 
