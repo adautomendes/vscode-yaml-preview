@@ -1,9 +1,9 @@
 {
-    "name": "yaml-preview",
-    "displayName": "Yaml Preview",
-    "description": "Displays a preview of yaml content",
-    "version": "0.0.1",
-    "publisher": "daiwata",
+    "name": "yaml2table-preview",
+    "displayName": "Yaml2Table Preview",
+    "description": "Displays a preview of yaml content as a table",
+    "version": "1.0.0",
+    "publisher": "adautomendes",
     "license": "MIT",
     "keywords": [
         "yaml",
