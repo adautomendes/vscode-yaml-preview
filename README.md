@@ -12,4 +12,3 @@ Documents written in YAML format can be previewed in real time on VS Code as a t
 
 #### Honorable mention
 > This extension was based on the original solution provided [here](https://github.com/daiwata/vscode-yaml-preview).
-
