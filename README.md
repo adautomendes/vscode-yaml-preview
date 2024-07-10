@@ -2,7 +2,7 @@
 
 Documents written in YAML format can be previewed in real time on VS Code as a table.
 
-![preview](./preview.png)
+![preview](./resources/preview.png)
 
 ## How to use
 
