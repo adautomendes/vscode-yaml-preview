@@ -2,7 +2,7 @@
     "name": "yaml2table-preview",
     "displayName": "Yaml2Table Preview",
     "description": "Displays a preview of yaml content as a table",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "adautomendes",
     "license": "MIT",
     "icon": "resources/icon.png",
@@ -17,22 +17,22 @@
         "vscode": "^1.41.1"
     },
     "activationEvents": [
-        "onCommand:yaml.showPreview",
-        "onCommand:yaml.showPreviewToSide",
+        "onCommand:yaml2table.showPreview",
+        "onCommand:yaml2table.showPreviewToSide",
         "onLanguage:yaml"
     ],
     "main": "./out/src/extension.js",
     "contributes": {
         "commands": [
             {
-                "command": "yaml.showPreview",
+                "command": "yaml2table.showPreview",
                 "title": "Open preview",
-                "category": "Yaml"
+                "category": "Yaml2Table"
             },
             {
-                "command": "yaml.showPreviewToSide",
+                "command": "yaml2table.showPreviewToSide",
                 "title": "Open preview to the side",
-                "category": "Yaml"
+                "category": "Yaml2Table"
             }
         ]
     },
