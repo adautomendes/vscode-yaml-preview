@@ -53,6 +53,7 @@
         "clean": "rm -rf node_modules out yaml2table-preview-1.0.*",
         "pretest": "tsc -p ./",
         "package": "vsce package",
-        "publish": "vsce publish"
+        "publish": "vsce publish",
+        "all": "npm run clean && npm run build && npm run package"
     }
 }
