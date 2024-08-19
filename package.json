@@ -2,7 +2,7 @@
     "name": "yaml2table-preview",
     "displayName": "Yaml2Table Preview",
     "description": "Displays a preview of yaml content as a table",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "publisher": "adautomendes",
     "license": "MIT",
     "icon": "resources/icon.png",
