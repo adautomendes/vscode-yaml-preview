@@ -50,6 +50,7 @@
     },
     "scripts": {
         "build": "npm install && npx tsc",
+        "clean": "rm -rf node_modules out yaml2table-preview-1.0.*",
         "pretest": "tsc -p ./",
         "package": "vsce package",
         "publish": "vsce publish"
