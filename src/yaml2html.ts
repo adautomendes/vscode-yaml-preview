@@ -1,54 +1,42 @@
 
-const styleTable = "style='border:none; border-collapse:collapse;color:#000000'";
-const styleTd = "style='background-color:#ffffff; padding:5px; border:1px solid silver; border-collapse:collapse;'";
-const styleTh = "style='white-space:normal; background-color:#eeeeee; padding:5px; width:70px; border:1px solid silver; border-collapse:collapse; vertical-align:top'";
-
 export function yaml2html(yamlObj: Object) {
-
-    let body: string = "";
-
-    body += "<table " + styleTable + ">";
-    body = convert(yamlObj, body);
-    body += "</table>";
-
-    return body;
+    return `<table>
+    ${convert(yamlObj, "")}
+    </table>`;
 }
 
 export function convert(item: any, body: string) {
-
     if (item instanceof Array) {
-
         let itemVal: any = item[0];
 
         // If the value is an object
         if (itemVal instanceof Object) {
             body = createlistTable(item, body);
-
         } else {
             // If the value is a string element
             for (let idx in item) {
                 body += "<li>" + item[idx] + "</li>";
             }
         }
-
     } else {
         for (let itemKey in item) {
             let itemVal = item[itemKey];
 
             // If the value is an object
             if (itemVal instanceof Object) {
-                body += "<tr><th " + styleTh + ">" + itemKey + "</th>";
-                body += "<td " + styleTd + "><table " + styleTable + ">";
+                body += "<tr><th>" + itemKey + "</th>";
+                body += "<td><table>";
                 body = convert(itemVal, body);
                 body += "</table></td></tr>";
 
             } else {
                 // If the value is a string element
-                body += "<tr><th " + styleTh + ">" + itemKey + "</th>";
-                body += "<td " + styleTd + ">" + itemVal + "</td></tr>";
+                body += "<tr><th>" + itemKey + "</th>";
+                body += "<td>" + itemVal + "</td></tr>";
             }
         }
     }
+
     return body;
 }
 
@@ -69,11 +57,11 @@ export function createlistTable(item: any, body: string) {
         }
     }
 
-    body += "<table " + styleTable + "><tr>";
+    body += "<table><tr>";
 
     // Table Header
     for (let idx in childKeyList) {
-        body += "<th " + styleTh + ">" + childKeyList[idx] + "</th>";
+        body += "<th>" + childKeyList[idx] + "</th>";
     }
 
     body += "</tr>";
@@ -90,13 +78,13 @@ export function createlistTable(item: any, body: string) {
 
             // Recursive call if child hierarchy is an object
             if (childVal instanceof Object) {
-                body += "<td " + styleTd + ">";
-                body += "<table " + styleTable + ">";
+                body += "<td>";
+                body += "<table>";
                 body = convert(childVal, body);
                 body += "</table></td>";
             } else {
 
-                body += "<td " + styleTd + ">" + childVal + "</td>";
+                body += "<td>" + childVal + "</td>";
             }
         }
         body += "</tr>";
