@@ -2,7 +2,7 @@
     "name": "yaml2table-preview",
     "displayName": "Yaml2Table Preview",
     "description": "Displays a preview of yaml content as a table",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "publisher": "adautomendes",
     "license": "MIT",
     "icon": "resources/icon.png",
@@ -49,6 +49,7 @@
         "url": "https://github.com/adautomendes/vscode-yaml-preview"
     },
     "scripts": {
+        "build": "npm install && npx tsc",
         "pretest": "tsc -p ./",
         "package": "vsce package",
         "publish": "vsce publish"
